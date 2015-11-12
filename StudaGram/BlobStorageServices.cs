@@ -20,7 +20,7 @@ namespace StudaGram.Controllers
             
             var storageAccount = GetStorageAccount();
             CloudBlobClient blobStorage = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer container = blobStorage.GetContainerReference("images");
+            CloudBlobContainer container = blobStorage.GetContainerReference("images-input");
             if (container.CreateIfNotExists())
             {
                 var permissions = container.GetPermissions();
