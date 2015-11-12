@@ -7356,3 +7356,15 @@ a.list-group-item-danger.active:focus {
 .panel-info .panel-heading {
   border-color: #000;
 }
+
+.message {
+    padding: 15px;
+    color: #008000;
+    background-color: #222222;
+}
+
+.messagefail {
+    padding: 15px;
+    color: #FF0000;
+    background-color: #222222;
+}

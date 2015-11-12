@@ -5,7 +5,10 @@
 
     <h2>Upload image</h2>
 <hr/>
-    <form class = "form-horizontal" role = "form" method="post" action="" enctype="multipart/form-data">
+
+@Html.Action(actionName: "TempMessage", controllerName: "Message")
+<br/>
+<form class = "form-horizontal" role = "form" method="post" action="" enctype="multipart/form-data">
 
         <div class="image-title">
             @Html.LabelFor(m => m.Title, new { @class = "col-md-2 control-label" })
@@ -22,8 +25,8 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input class="btn btn-default" type="file" id="@Html.IdFor(m => m.UploadedFile)" name="@Html.NameFor(m => m.UploadedFile)" />
-                <input class="btn btn-default" type="submit" />
+                <input class="btn btn-default" type="file" id="@Html.IdFor(m => m.UploadedFile)" name="@Html.NameFor(m => m.UploadedFile)"/>
+                <input class="btn btn-default" type="submit"/>
             </div>
         </div>
 

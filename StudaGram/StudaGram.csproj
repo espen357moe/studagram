@@ -248,6 +248,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LikeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -325,6 +326,7 @@
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\Upload\Index.cshtml" />
     <Content Include="Views\Home\AccessDenied.cshtml" />
+    <Content Include="Views\Message\TempMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

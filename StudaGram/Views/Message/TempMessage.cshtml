@@ -1,0 +1,24 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+      @{
+          string message = TempData["Message"] as string;
+          if (!String.IsNullOrEmpty(message))
+          {
+              if (message.Contains("Failed"))
+              {
+                  <div class="messagefail">
+                      <p>@message</p>
+                  </div>
+              }
+              else
+              {
+                <div class="message">
+                    <p>@message</p>
+                </div>
+              }
+          }
+    }

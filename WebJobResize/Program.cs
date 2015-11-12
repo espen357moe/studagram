@@ -19,17 +19,11 @@ namespace WebJobResize
         // AzureWebJobsDashboard and AzureWebJobsStorage
         public static void Resize(
        [BlobTrigger(@"images-input/{name}")] WebImage input,
-       [Blob(@"images2-output/{name}")] out WebImage output)
+       [Blob(@"images/{name}")] out WebImage output)
         {
             var width = 300;
             var height = 300;
             output = input.Resize(width, height);
-        }
-        public static void WaterMark(
-        [BlobTrigger(@"images2-output/{name}")] WebImage input,
-        [Blob(@"images2-newoutput/{name}")] out WebImage output)
-        {
-            output = input.AddTextWatermark("WebJobs is now awesome!!!!", fontSize: 6);
         }
     }
     public class WebImageBinder : ICloudBlobStreamBinder<WebImage>

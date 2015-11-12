@@ -34,12 +34,11 @@ namespace StudaGram.Controllers
             var image = Image.UploadedFile;
             if (image == null)
             {
-                Response.Write("Failed to upload image");
+                TempData["Message"] = "Failed to upload image";
             }
             else
             {
-                Response.Write(String.Format("Got image {0} of type {1} and size {2}", image.FileName,
-                    image.ContentType, image.ContentLength));
+                TempData["Message"] = "The images was successfully uploaded to InstaStudentGram";
 
                 string uniqueBlobName = string.Format("image_{0}-{1}", Guid.NewGuid().ToString(),
                     Path.GetExtension(image.FileName));
